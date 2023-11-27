@@ -1,0 +1,23 @@
+.page {
+    width: 73%;
+    float: right;
+    margin-right: 0;
+    padding: 0 2% 2em;
+}
+/* --- --- 初始化：隐藏后面三个section --- --- */
+#publications, #projects-and-patents, #more-about{
+    display: none;
+}
+
+/* --- --- 表格 --- --- */
+table{
+    width: 98%;
+    border: 1px solid #000;
+}
+td{
+    margin: 0;
+    padding: 3px 10px;
+    border: 1px solid #000;
+    font-size: 14px;
+}
+

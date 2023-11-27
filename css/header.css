@@ -1,0 +1,39 @@
+.header {
+    position: relative;
+    border-bottom: 1px solid #f2f3f3;
+    -webkit-animation: intro 0.3s both;
+    animation: intro 0.3s both;
+    -webkit-animation-delay: 0.15s;
+    animation-delay: 0.15s;
+    z-index: 20;
+}
+
+.site-nav{
+    z-index: 10;
+    position: relative;
+    min-width: 250px;
+    background: #fff;
+}
+.site-nav ul{
+    display: table;
+    margin: 0;
+    padding: 0;
+    clear: both;
+    list-style-type: none;
+}
+.site-nav ul li{
+    display: table-cell;
+    vertical-align: middle;
+}
+.site-nav ul li span{
+    position: relative;
+    display: block;
+    margin: 0 1rem 0 0;
+    padding: 0.5rem;
+    color: #7a8288;
+    text-decoration: none;
+}
+.site-nav ul li :hover{
+    background-color: #d9dbdf;
+    color: #2b2d2f;
+}

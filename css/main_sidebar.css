@@ -1,0 +1,153 @@
+#main {
+    position: relative;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+
+    animation: intro 0.3s both;
+    animation-delay: 0.35s;
+}
+
+/* --- --- 侧边栏 --- --- */
+.sidebar {
+    position: relative;
+    left: 0;
+    display: inline-block;
+    margin-bottom: 1em;
+    margin-right: 0;
+    clear: both;
+    padding: 0 30px 20px 5px;
+    width: 18%;
+    border-right: 1px solid #e2e3e3;
+
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    transform: translate3d(0, 0, 0);
+}
+
+/* --- 头像 --- */
+.author__avatar {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.author__avatar img {
+    width: 90%;
+    height: auto;
+    padding: 5px;
+    border: 1px solid #f2f3f3;
+}
+
+/* --- 主要信息 --- */
+/* 姓名 */
+.author__content {
+    padding-right: 20px;
+}
+
+.author__name {
+    margin-top: 10px;
+}
+
+/* 联系 */
+.author__urls-wrapper {
+    position: relative;
+    vertical-align: middle;
+    z-index: 10;
+}
+
+.author__urls {
+    position: relative;
+    display: block;
+    padding: 0;
+    list-style-type: none;
+    background: transparent;
+    z-index: -1;
+}
+
+.author__urls-wrapper li {
+    /* font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif; */
+    position: relative;
+    width: fit-content;
+    white-space: nowrap;
+    font-size: .8em;
+    color: #323131;
+}
+
+/* 小图标 */
+.iconfont {
+    display: inline-block;
+    width: 1.5em;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    text-align: center;
+}
+@font-face {
+    font-family: "iconfont";
+    /* Project id  */
+    src: url('../resources/iconfont/iconfont.ttf') format('truetype');
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 1.2em;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-map-marker:before {
+    content: "\e8e4";
+}
+.icon-school:before {
+    content: "\f0a7";
+}
+.icon-title:before {
+    content: "\e6be";
+}
+.icon-email:before {
+    content: "\e712";
+}
+.icon-github:before {
+    content: "\e673";
+}
+
+/* 文字部分 */
+.author__urls a {
+    display: block;
+    margin-bottom: 5px;
+    padding: 2px 5px 2px 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+.author__urls a:hover {
+    background: #b6baba;
+}
+/* 邮箱弹出窗口 */
+#pop-up{
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #545252;
+    font-size: 1.2em;
+    color: #f2f3f3;
+    opacity: 0.75;
+}
+#pop-up div{
+    padding-bottom: 0.1em;
+    border-bottom: 1px solid #faf9f9;
+    margin-bottom: 0.5em;
+}
+#pop-up button{
+    display: inline-block;
+
+    border-radius: 3px;
+    padding: 3px 8px;
+    margin-right: 1em;
+    font-size: 0.8em;
+
+    cursor: pointer;
+}
