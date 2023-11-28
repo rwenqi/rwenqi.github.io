@@ -83,32 +83,37 @@
     text-align: center;
 }
 @font-face {
-    font-family: "iconfont";
-    /* Project id  */
-    src: url('../resources/iconfont/iconfont.ttf') format('truetype');
-}
-.iconfont {
+    font-family: "iconfont"; /* Project id  */
+    src: url('../resources/iconfont/iconfont.ttf?t=1701095203625') format('truetype');
+  }
+  
+  .iconfont {
     font-family: "iconfont" !important;
-    font-size: 1.2em;
+    font-size: 16px;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-.icon-map-marker:before {
-    content: "\e8e4";
-}
-.icon-school:before {
-    content: "\f0a7";
-}
-.icon-title:before {
-    content: "\e6be";
-}
-.icon-email:before {
-    content: "\e712";
-}
-.icon-github:before {
-    content: "\e673";
-}
+  }
+  
+  .icon-email:before {
+    content: "\e664";
+  }
+  
+  .icon-school:before {
+    content: "\e6c3";
+  }
+  
+  .icon-map-marker:before {
+    content: "\e7e1";
+  }
+  
+  .icon-google:before {
+    content: "\e87a";
+  }
+  
+  .icon-title:before {
+    content: "\eb8b";
+  }
 
 /* 文字部分 */
 .author__urls a {
