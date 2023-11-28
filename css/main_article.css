@@ -9,6 +9,11 @@
     display: none;
 }
 
+#representitive-publications:hover{
+    background-color: #d9dbdf;
+    color: #2b2d2f;
+}
+
 /* --- --- 表格 --- --- */
 table{
     width: 98%;
