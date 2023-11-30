@@ -13,6 +13,14 @@
     background-color: #d9dbdf;
     color: #2b2d2f;
 }
+#home a{
+    color: #797979;
+    font-style: italic;
+}
+#home a:hover{
+    color: #2b2d2f;
+    font-weight: bold;
+}
 
 /* --- --- 表格 --- --- */
 table{
