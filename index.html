@@ -22,27 +22,32 @@
     <div class="header">
         <div class="inner-wrap">
             <div class="menu">
-                <nav class="site-nav">
+                <nav class="site-nav" aria-label="Main navigation">
                     <ul>
-                        <li class="switch-control" style="padding: 0.5em 1em; font-weight: bold;">
-                            <span class="">
+                        <li style="font-weight: bold;">
+                            <button type="button" class="switch-control" data-section="home" aria-controls="home" aria-current="page">
                                 Wenqi Ren's Homepage
-                            </span>
+                            </button>
                         </li>
-                        <li class="switch-control">
-                            <span>
+                        <li>
+                            <button type="button" class="switch-control" data-section="publications" aria-controls="publications">
                                 Publications
-                            </span>
+                            </button>
                         </li>
-                        <li class="switch-control">
-                            <span>
-                                项目 专利 竞赛
-                            </span>
+                        <li>
+                            <button type="button" class="switch-control" data-section="team" aria-controls="team">
+                                Team
+                            </button>
                         </li>
-                        <li class="switch-control">
-                            <span>
+                        <li>
+                            <button type="button" class="switch-control" data-section="projects-and-patents" aria-controls="projects-and-patents">
+                                Projects, Patents &amp; Competitions
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="switch-control" data-section="more-about" aria-controls="more-about">
                                 More About
-                            </span>
+                            </button>
                         </li>
                     </ul>
                 </nav>
@@ -243,7 +248,7 @@
                 </ul>
             </section>
             <!-- 论著 -->
-            <section class="switch-content" id="publications" itemprop="text">
+            <section class="switch-content" id="publications" itemprop="text" hidden>
                 <h1 id="journal-articles">Journal Articles</h1>
                 <ul class="num-ul">
                 <li>Yuning Cui, <strong>Wenqi Ren</strong> and Alois Knoll,
@@ -1192,9 +1197,326 @@
                 </ul>
     
             </section>
+            <!-- 课题组：在组名单由维护者提供；离组名单依据提供的 Excel 整理。 -->
+            <section class="switch-content" id="team" itemprop="text" aria-labelledby="team-title" hidden>
+                <h1 id="team-title">Team</h1>
+                <div class="team-tabs" role="tablist" aria-label="Team members">
+                    <button type="button" class="team-tab" id="team-current-members-tab" role="tab" aria-controls="current-members" aria-selected="true" tabindex="0">Current Members</button>
+                    <button type="button" class="team-tab" id="team-alumni-tab" role="tab" aria-controls="alumni" aria-selected="false" tabindex="-1">Alumni</button>
+                </div>
+
+                <div class="team-panel" id="current-members" role="tabpanel" aria-labelledby="team-current-members-tab">
+                    <div class="members-grid members-grid-final">
+                        <div class="team-table-frame members-block">
+                            <table class="team-table members-table">
+                                <caption>博士后</caption>
+                                <colgroup><col class="member-name-col"><col class="member-year-col"></colgroup>
+                                <thead><tr><th scope="col">姓名</th><th scope="col">入站年份</th></tr></thead>
+                                <tbody data-member-group="postdocs">
+                                    <tr>
+                                        <td class="member-name">李秋岑</td>
+                                        <td class="member-year">2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">郑浩</td>
+                                        <td class="member-year">2026</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="team-table-frame members-block">
+                            <table class="team-table members-table">
+                                <caption>博士</caption>
+                                <colgroup><col class="member-name-col"><col class="member-year-col"></colgroup>
+                                <thead><tr><th scope="col">姓名</th><th scope="col">入学年份</th></tr></thead>
+                                <tbody data-member-group="doctoral">
+                                    <tr>
+                                        <td class="member-name">李凯</td>
+                                        <td class="member-year">2022</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">张爱平</td>
+                                        <td class="member-year">2022</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">王健刚</td>
+                                        <td class="member-year">2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">刘志睿</td>
+                                        <td class="member-year">2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">林欣莹<span class="member-affiliation">（河套联培）</span></td>
+                                        <td class="member-year">2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">张雅竹</td>
+                                        <td class="member-year">2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">刘鑫</td>
+                                        <td class="member-year">2026</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">孙浩<span class="member-affiliation">（鹏城联培）</span></td>
+                                        <td class="member-year">2026</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">行亚楠</td>
+                                        <td class="member-year">2026</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="team-table-frame members-block">
+                            <table class="team-table members-table">
+                                <caption>硕士</caption>
+                                <colgroup><col class="member-name-col"><col class="member-year-col"></colgroup>
+                                <thead><tr><th scope="col">姓名</th><th scope="col">入学年份</th></tr></thead>
+                                <tbody data-member-group="masters">
+                                    <tr>
+                                        <td class="member-name">马腾</td>
+                                        <td class="member-year">2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">俞思梵</td>
+                                        <td class="member-year">2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">彭佳龙</td>
+                                        <td class="member-year">2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">张博超</td>
+                                        <td class="member-year">2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">单天奇</td>
+                                        <td class="member-year">2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">杨锦城</td>
+                                        <td class="member-year">2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">李俊锋</td>
+                                        <td class="member-year">2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">梁栩恺</td>
+                                        <td class="member-year">2026</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">刘鑫</td>
+                                        <td class="member-year">2026</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">郭堉霖</td>
+                                        <td class="member-year">2026</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">余希</td>
+                                        <td class="member-year">2026</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="member-name">史祖昊</td>
+                                        <td class="member-year">2026</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="team-table-frame members-block visitors-block">
+                            <table class="team-table members-table visitors-table">
+                                <caption>访问</caption>
+                                <colgroup><col class="member-name-col"><col class="member-year-col"></colgroup>
+                                <thead><tr><th scope="col">姓名</th><th scope="col">入组年份</th></tr></thead>
+                                <tbody data-visitor-group="doctoral">
+                                    <tr class="visitor-level-row"><th scope="rowgroup" colspan="2">博士</th></tr>
+                                    <tr><td class="member-name">崔玉宁</td><td class="member-year">2026</td></tr>
+                                    <tr><td class="member-name">耿金妮</td><td class="member-year">2026</td></tr>
+                                </tbody>
+                                <tbody data-visitor-group="masters">
+                                    <tr class="visitor-level-row"><th scope="rowgroup" colspan="2">硕士</th></tr>
+                                    <tr><td class="member-name">刘昊鹏</td><td class="member-year">2026</td></tr>
+                                    <tr><td class="member-name">赵羿轩</td><td class="member-year">2026</td></tr>
+                                    <tr><td class="member-name">陈浩浩</td><td class="member-year">2026</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-panel" id="alumni" role="tabpanel" aria-labelledby="team-alumni-tab" hidden>
+                    <p class="table-scroll-hint">Swipe horizontally to view the full table.</p>
+                    <div class="team-table-wrap team-table-frame alumni-table-wrap" role="region" aria-label="Alumni destinations" tabindex="0">
+                        <table class="team-table alumni-table">
+                            <thead><tr><th scope="col">姓名</th><th scope="col">培养层次</th><th scope="col">在组时间</th><th scope="col">毕业去向</th></tr></thead>
+                            <tbody data-alumni-group="postdocs">
+                                <tr>
+                                    <td>郑卓然</td>
+                                    <td>博士后</td>
+                                    <td>2024–2025</td>
+                                    <td>国防科技大学-讲师</td>
+                                </tr>
+                            </tbody>
+                            <tbody data-alumni-group="doctoral-joint">
+                                <tr>
+                                    <td>严彦阳</td>
+                                    <td>博士（联合指导）</td>
+                                    <td>2015–2022</td>
+                                    <td>中国科学院计算技术研究所-副教授</td>
+                                </tr>
+                                <tr>
+                                    <td>罗君</td>
+                                    <td>博士（联合指导）</td>
+                                    <td>2020–2024</td>
+                                    <td>启元实验室</td>
+                                </tr>
+                                <tr>
+                                    <td>韩冰</td>
+                                    <td>博士（联合指导）</td>
+                                    <td>2020–2024</td>
+                                    <td>中国电子信息产业发展研究院</td>
+                                </tr>
+                                <tr>
+                                    <td>孙上荃</td>
+                                    <td>博士（联合指导）</td>
+                                    <td>2021–2025</td>
+                                    <td>南洋理工大学-博士后</td>
+                                </tr>
+                            </tbody>
+                            <tbody data-alumni-group="doctoral-visitors">
+                                <tr>
+                                    <td>胡晓彬</td>
+                                    <td>博士（访问）</td>
+                                    <td>2018–2022</td>
+                                    <td>新加坡国立大学-博士后</td>
+                                </tr>
+                                <tr>
+                                    <td>莫红</td>
+                                    <td>博士（访问）</td>
+                                    <td>2019–2022</td>
+                                    <td>湖北文理学院-讲师</td>
+                                </tr>
+                            </tbody>
+                            <tbody data-alumni-group="masters">
+                                <tr>
+                                    <td>李嫣</td>
+                                    <td>硕士</td>
+                                    <td>2021–2024</td>
+                                    <td>中国邮政储蓄银行软件研发中心</td>
+                                </tr>
+                                <tr>
+                                    <td>王强</td>
+                                    <td>硕士</td>
+                                    <td>2022–2025</td>
+                                    <td>腾讯控股有限公司</td>
+                                </tr>
+                                <tr>
+                                    <td>陆晓斌</td>
+                                    <td>硕士</td>
+                                    <td>2022–2025</td>
+                                    <td>华为技术有限公司</td>
+                                </tr>
+                                <tr>
+                                    <td>刘海根</td>
+                                    <td>硕士</td>
+                                    <td>2022–2025</td>
+                                    <td>杭州海康威视数字技术股份有限公司</td>
+                                </tr>
+                                <tr>
+                                    <td>伍琳睿</td>
+                                    <td>硕士</td>
+                                    <td>2022–2025</td>
+                                    <td>腾讯控股有限公司</td>
+                                </tr>
+                                <tr>
+                                    <td>杜重阳</td>
+                                    <td>硕士</td>
+                                    <td>2022–2025</td>
+                                    <td>广东省深圳市市场监督管理局</td>
+                                </tr>
+                                <tr>
+                                    <td>陈晓旭</td>
+                                    <td>硕士</td>
+                                    <td>2022–2025</td>
+                                    <td>阿里巴巴集团控股有限公司</td>
+                                </tr>
+                                <tr>
+                                    <td>孔德泓</td>
+                                    <td>硕士</td>
+                                    <td>2023–2026</td>
+                                    <td>华为技术有限公司</td>
+                                </tr>
+                                <tr>
+                                    <td>吴泓璟</td>
+                                    <td>硕士</td>
+                                    <td>2023–2026</td>
+                                    <td>滴滴全球股份有限公司</td>
+                                </tr>
+                                <tr>
+                                    <td>陈柯文</td>
+                                    <td>硕士</td>
+                                    <td>2023–2026</td>
+                                    <td>华为技术有限公司</td>
+                                </tr>
+                                <tr>
+                                    <td>陈星池</td>
+                                    <td>硕士</td>
+                                    <td>2023–2026</td>
+                                    <td>华为技术有限公司</td>
+                                </tr>
+                            </tbody>
+                            <tbody data-alumni-group="masters-police">
+                                <tr>
+                                    <td>高志靖</td>
+                                    <td>硕士（公安联培）</td>
+                                    <td>2021–2024</td>
+                                    <td>河北省保定市公安局</td>
+                                </tr>
+                                <tr>
+                                    <td>卢月</td>
+                                    <td>硕士（公安联培）</td>
+                                    <td>2021–2024</td>
+                                    <td>天津市公安局</td>
+                                </tr>
+                            </tbody>
+                            <tbody data-alumni-group="masters-visitors">
+                                <tr>
+                                    <td>方成</td>
+                                    <td>硕士（访问）</td>
+                                    <td>2025–2026</td>
+                                    <td>江苏科技大学</td>
+                                </tr>
+                                <tr>
+                                    <td>朱洁</td>
+                                    <td>硕士（访问）</td>
+                                    <td>2025–2026</td>
+                                    <td>江苏科技大学</td>
+                                </tr>
+                            </tbody>
+                            <tbody data-alumni-group="ap">
+                                <tr>
+                                    <td>陈昱瀛</td>
+                                    <td>AP</td>
+                                    <td>2023–2026</td>
+                                    <td>北京航空航天大学-博士</td>
+                                </tr>
+                                <tr>
+                                    <td>郭正伟</td>
+                                    <td>AP</td>
+                                    <td>2024–2025</td>
+                                    <td>南京理工大学-博士</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
             <!-- 项目与专利 -->
-            <section class="switch-content" id="projects-and-patents" itemprop="text">
-                <h1 id="projects-hosted">主持项目</h1>
+            <section class="switch-content" id="projects-and-patents" itemprop="text" hidden>
+                <h1 id="projects-hosted">Research Projects</h1>
                 <!-- <ul class="num-ul">
                     <li>生成式人工智能多模态内容鉴伪方法研究，国家自然科学基金联合重点支持项目（U24B20175），2025.01-2028.12，主持</li>
                     <li>基于扩散模型的多退化场景数据合成与统一恢复技术，华为-中山大学合作项目（TC20240313020），主持</li>
@@ -1242,7 +1564,7 @@
                     <li>数字产品知识产权保护与服务技术研究开发及应用示范，国家重点研发计划子课题（2019YFB1406500），2019.12-2022.11，项目骨干</li>
                     <li>网络空间图像视频增强，CCF-腾讯犀牛鸟基金，2017.01-2018.12，主持（卓越奖）</li>
                 </ul>
-                <h1 id="patents-pending">申请专利</h1>
+                <h1 id="patents-pending">Patent Applications</h1>
                 <ul class="num-ul">
                     <!-- <li>任文琦，操晓春，陈星池，郑卓然，一种超高清动态多曝光图像融合方法、装置、设备及存储介质</li>
                     <li>任文琦，陈星池，郑卓然，操晓春，一种超高清图像和视频实时增强方法、系统和介质</li>
@@ -1275,7 +1597,7 @@
                     <li>任文琦;马林;刘威;操晓春，图像增强处理方法及装置，专利申请日：2018年01月16日，专 利 号：ZL 2018 1 0038866.X，授权公告日：2022年02月22日，授权公告号：CN 108305236 B</li>
                     <li>任文琦;马林;刘威;操晓春，图像处理方法及相关装置，专利申请日：2018年01月19日，专 利 号：ZL 2018 1 0054848.0，授权公告日：2021年05月25日，授权公告号：CN 110060210 B</li>
                 </ul>
-                <h1 id="Competition">竞赛</h1>
+                <h1 id="Competition">Competitions</h1>
                 <ul class="num-ul">
                     
                     <li>
@@ -1293,7 +1615,7 @@
                 </ul>
             </section>
             <!-- 更多 -->
-            <section class="switch-content" id="more-about" itemprop="text">
+            <section class="switch-content" id="more-about" itemprop="text" hidden>
                 <h1 id="education-background">Education Background</h1>
                 
                 <table rules="cols" style="font-family: inherit; font-size: 100%;">
@@ -1447,24 +1769,94 @@
     })
 </script>
 <script>
-    var controls = document.getElementsByClassName('switch-control');
-    var contents = document.getElementsByClassName('switch-content');
-    // 顶栏 点击
-    for (let i = 0; i < controls.length; ++i) {
-        controls[i].addEventListener('click', function () {
-            console.log('switching to ' + contents[i].id);
-            contents[i].style.display = 'block';
-            for (let j = 1; j < 4; ++j) {
-                contents[(i + j) % 4].style.display = 'none';
-            }
-        })
+    const controls = document.querySelectorAll('.switch-control');
+    const contents = document.querySelectorAll('.switch-content');
+
+    // Team 默认展示 Current Members，两个页签只切换本栏目内的名单。
+    const teamTabs = document.querySelectorAll('#team .team-tab');
+    const teamPanels = document.querySelectorAll('#team .team-panel');
+
+    function showTeamPanel(panelId) {
+        teamPanels.forEach(function (panel) {
+            panel.hidden = panel.id !== panelId;
+        });
+        teamTabs.forEach(function (tab) {
+            const active = tab.getAttribute('aria-controls') === panelId;
+            tab.setAttribute('aria-selected', String(active));
+            tab.tabIndex = active ? 0 : -1;
+        });
     }
 
-    // 代表性论著标题 点击
+    teamTabs.forEach(function (tab, index) {
+        tab.addEventListener('click', function () {
+            showTeamPanel(tab.getAttribute('aria-controls'));
+        });
+        tab.addEventListener('keydown', function (event) {
+            let nextIndex;
+            if (event.key === 'ArrowRight') {
+                nextIndex = (index + 1) % teamTabs.length;
+            } else if (event.key === 'ArrowLeft') {
+                nextIndex = (index - 1 + teamTabs.length) % teamTabs.length;
+            } else if (event.key === 'Home') {
+                nextIndex = 0;
+            } else if (event.key === 'End') {
+                nextIndex = teamTabs.length - 1;
+            } else {
+                return;
+            }
+            event.preventDefault();
+            const nextTab = teamTabs[nextIndex];
+            showTeamPanel(nextTab.getAttribute('aria-controls'));
+            nextTab.focus();
+        });
+    });
+    showTeamPanel('current-members');
+
+    // 导航按栏目 ID 切换，新增栏目无需修改固定数量或顺序。
+    function showSection(sectionId) {
+        const selected = document.getElementById(sectionId);
+        if (!selected || !selected.classList.contains('switch-content')) {
+            return;
+        }
+        if (sectionId === 'team' && selected.hidden) {
+            showTeamPanel('current-members');
+        }
+        contents.forEach(function (content) {
+            content.hidden = content !== selected;
+        });
+        controls.forEach(function (control) {
+            if (control.dataset.section === sectionId) {
+                control.setAttribute('aria-current', 'page');
+            } else {
+                control.removeAttribute('aria-current');
+            }
+        });
+    }
+
+    // 支持 index.html#team 直接预览，以及浏览器前进、后退。
+    function showSectionFromHash() {
+        const requested = window.location.hash.slice(1);
+        const selected = document.getElementById(requested);
+        showSection(selected && selected.classList.contains('switch-content') ? requested : 'home');
+    }
+
+    controls.forEach(function (control) {
+        control.addEventListener('click', function () {
+            const sectionId = control.dataset.section;
+            showSection(sectionId);
+            if (window.location.hash !== '#' + sectionId) {
+                window.location.hash = sectionId;
+            }
+        });
+    });
+    window.addEventListener('hashchange', showSectionFromHash);
+    showSectionFromHash();
+
+    // 保留现有 News 标题跳转到论文栏目的行为。
     var h1_rep_pub = document.getElementById("representitive-publications");
     h1_rep_pub.addEventListener('click', function () {
-        controls[1].click();
-    })
+        document.querySelector('[data-section="publications"]').click();
+    });
 </script>
 
 </html>

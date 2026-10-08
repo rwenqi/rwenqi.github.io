@@ -4,8 +4,10 @@
     margin-right: 0;
     padding: 0 2% 2em;
 }
-/* --- --- 初始化：隐藏后面三个section --- --- */
-#publications, #projects-and-patents, #more-about{
+
+/* 根据 hidden 属性隐藏未选中的栏目。 */
+.switch-content[hidden],
+.team-panel[hidden] {
     display: none;
 }
 
@@ -32,5 +34,323 @@ td{
     padding: 3px 10px;
     border: 1px solid #000;
     font-size: 14px;
+}
+
+/* --- --- 课题组 --- --- */
+#team {
+    font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", Arial, sans-serif;
+}
+
+#team h1 {
+    font-family: inherit;
+    font-weight: 600;
+}
+
+#team h1 {
+    margin-top: 0.5em;
+    font-size: 30px;
+}
+
+.team-tabs {
+    display: flex;
+    gap: 8px;
+    max-width: 800px;
+    margin: 0 auto 18px;
+    border-bottom: 1px solid #e1e7ec;
+}
+
+.team-tab {
+    min-height: 44px;
+    margin-bottom: -1px;
+    padding: 10px 16px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: 4px 4px 0 0;
+    background: transparent;
+    color: #697076;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.team-tab:hover {
+    background: #f5f7f8;
+    color: #314f64;
+}
+
+.team-tab[aria-selected="true"] {
+    border-bottom-color: #314f64;
+    background: #eef3f6;
+    color: #314f64;
+}
+
+.team-tab:focus-visible {
+    outline: 2px solid #314f64;
+    outline-offset: 2px;
+}
+
+.team-table-wrap {
+    overflow-x: auto;
+}
+
+.team-table-wrap:focus-visible {
+    outline: 2px solid #7a8288;
+    outline-offset: 2px;
+}
+
+.table-scroll-hint {
+    display: none;
+    margin: 0.5em 0;
+    color: #797979;
+    font-size: 0.8em;
+}
+
+#team .team-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 0;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#team .team-table th,
+#team .team-table td {
+    padding: 5px 8px;
+    border: 0;
+    border-bottom: 1px solid #e2e3e3;
+    font-size: 14px;
+    line-height: 1.45;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#team .team-table thead th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background: #f3f4f5;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+#team .team-table tbody tr:nth-child(even) {
+    background: #fafbfc;
+}
+
+#team .team-table-frame {
+    overflow: hidden;
+    border: 1px solid #d9e1e7;
+    border-radius: 8px;
+}
+
+#team .team-table-wrap.team-table-frame {
+    overflow-x: auto;
+}
+
+#team .members-table-wrap,
+#team .alumni-table-wrap {
+    margin: 0 auto;
+}
+
+#team .members-table-wrap {
+    max-width: 640px;
+}
+
+#team .alumni-table-wrap {
+    max-width: 800px;
+}
+
+#team .members-table {
+    max-width: 640px;
+    table-layout: fixed;
+}
+
+#team .team-table tr > * {
+    border-right: 1px solid #e1e7ec;
+}
+
+#team .team-table tr > :last-child {
+    border-right: 0;
+}
+
+#team .team-table tbody:last-child tr:last-child > * {
+    border-bottom: 0;
+}
+
+#team .members-table .member-name-col {
+    width: 38%;
+}
+
+#team .members-table .member-level-col {
+    width: 30%;
+}
+
+#team .members-table .member-year-col {
+    width: 32%;
+}
+
+#team .members-table .member-name {
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+#team .members-table .member-kind {
+    color: #495b6b;
+}
+
+#team .member-affiliation {
+    display: inline-block;
+    color: #697076;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+#team .members-table .member-year {
+    white-space: nowrap;
+    color: #697076;
+    font-variant-numeric: tabular-nums;
+}
+
+#team .alumni-table {
+    min-width: 640px;
+}
+
+#team .members-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#team .members-grid-final {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+#team .members-block .members-table {
+    max-width: none;
+}
+
+#team .members-block caption {
+    padding: 10px 8px;
+    border-bottom: 1px solid #e1e7ec;
+    background: #edf3f7;
+    color: #314f64;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#team .members-block .member-name-col {
+    width: 50%;
+}
+
+#team .members-block .member-year-col {
+    width: 50%;
+}
+
+#team .members-block thead th {
+    padding-right: 4px;
+    padding-left: 4px;
+    font-size: 13px;
+}
+
+#team .members-block .member-affiliation {
+    display: block;
+    line-height: 1.35;
+}
+
+#team .visitors-table .visitor-level-row th {
+    padding: 4px 8px;
+    background: #f8fafb;
+    color: #697076;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#team .alumni-table td:first-child {
+    width: 14%;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+#team .alumni-table td:nth-child(2) {
+    width: 20%;
+    white-space: nowrap;
+}
+
+#team .alumni-table td:nth-child(3) {
+    width: 20%;
+    white-space: nowrap;
+    color: #697076;
+}
+
+#team .alumni-table td:nth-child(4) {
+    width: 46%;
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+    #team .members-grid-final {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .inner-wrap {
+        min-width: 0;
+        padding: 1em;
+    }
+
+    .sidebar {
+        display: block;
+        width: auto;
+        margin: 0 0 1.25em;
+        padding: 0 0 1.25em;
+        border-right: 0;
+        border-bottom: 1px solid #e2e3e3;
+        text-align: left;
+    }
+
+    .author__avatar {
+        width: 120px;
+    }
+
+    .author__urls-wrapper li {
+        white-space: normal;
+    }
+
+    .page {
+        float: none;
+        width: auto;
+        padding: 0 0 2em;
+    }
+
+    .table-scroll-hint {
+        display: block;
+    }
+
+    #team .members-table {
+        min-width: 0;
+    }
+
+    #team .members-table-wrap .member-name-col {
+        width: 32%;
+    }
+
+    #team .members-table-wrap .member-level-col {
+        width: 31%;
+    }
+
+    #team .members-table-wrap .member-year-col {
+        width: 37%;
+    }
+
+    #team .members-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
 }
 
